@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  api:
+    container_name: thegame-api
+    build: .
+    ports:
+      - 8080:8080
+    environment:
+      - DB_USERNAME=pg
+      - DB_PASSWORD=pass
+      - DB_NAME=thegame
+      - DB_PORT=5432
+      - HOST=database
+    depends_on:
+      - database
+
+  database:
+    container_name: database
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=pg
+      - POSTGRES_PASSWORD=pass
+      - POSTGRES_DB=thegame
+      - POSTGRES_PORT=5432
+    ports:
+      - 5432:5432
+    volumes:
+      - db:/var/lib/postgresql/data
+
+volumes:
+  db:

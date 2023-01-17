@@ -1,0 +1,24 @@
+# Install pre-commit from https://pre-commit.com/
+# To install this config run command "pre-commit install"
+# For more details check out https://pre-commit.com/
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.4.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+  - repo: local
+    hooks:
+      - id: go-fmt
+        name: Run gofmt
+        entry: gofmt -w
+        language: golang
+        types: [go]
+  - repo: https://github.com/golangci/golangci-lint
+    rev: v1.23.6
+    hooks:
+      - id: golangci-lint
+        name: Run Go Lint

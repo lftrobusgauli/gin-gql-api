@@ -1,0 +1,44 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+type User {
+ id: ID!
+ name: String!
+ gameState: GameState
+}
+
+type Query {
+ users: [User!]!
+ getGameState(userId: ID!): GameState!
+ getFriends(userId: ID!): [Friend]!
+}
+
+type GameState {
+	id: ID!
+	gamesPlayed: Int
+	score: Int
+	userId: ID!
+	user: User
+}
+
+type Friend {
+	id: ID!
+	name: String!
+	highscore: Int!
+}
+
+input NewUser {
+ name: String!
+}
+
+input UserGameState {
+	userId: ID!
+	gamesPlayed: Int
+	score: Int
+}
+
+type Mutation {
+ createUser(input: NewUser!): User!
+ updateGameState(input: UserGameState!): GameState!
+ addFriends(userID: ID!, input: [ID!]): [Friend]!
+}

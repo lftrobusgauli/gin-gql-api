@@ -1,0 +1,20 @@
+# Install golangci-lint from https://github.com/golangci/golangci-lint
+# Run "golangci-lint run" to run lint on golang files
+# Run "golangci-lint help linters" to see a list of supported linters by golangci-lint
+
+run:
+  concurrency: 4
+linters:
+  enable:
+    - govet
+    - errcheck
+    - staticcheck
+    - unused
+    - gosimple
+    - structcheck
+    - varcheck
+    - ineffassign
+    - deadcode
+    - typecheck
+    - goconst
+    - goimports
