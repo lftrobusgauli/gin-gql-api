@@ -29,13 +29,13 @@ The application, `the-game`, utilizes the web framework `gin` for its developmen
 
 ### Installation
 1. Clone the repository
-``` shell
-git clone git@github.com:samya-ak/the-game.git
+```
+git clone git@github.com:lftrobusgauli/gin-gql-api.git
 ```
 
 1. Build required docker containers for source code and database and run the application
 ```
-cd the-game
+cd gin-gql-api
 make docker/start
 ```
 
