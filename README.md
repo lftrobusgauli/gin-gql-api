@@ -1,7 +1,7 @@
-# the-game
+# gin-gql-api
 
 ## Table of Contents
-- [the-game](#the-game)
+- [gin-gql-api](#gin-gql-api)
 	- [Table of Contents](#table-of-contents)
 	- [Overview](#overview)
 	- [Development Setup](#development-setup)
@@ -13,7 +13,7 @@
 	- [License](#license)
 
 ## Overview
-The application, `the-game`, utilizes the web framework `gin` for its development. This framework offers built-in support for features such as middleware support, JSON validation, routing, and error management. In addition, the application utilizes `gqlgen` for working with GraphQL. This library allows for the dynamic creation of models and resolvers for queries and mutations, based on the GraphQL schema. The ORM of choice for the application is `gorm`, which facilitates seamless interaction with SQL. Furthermore, `testify` and `go-sqlmock` are employed for writing unit tests, ensuring the robustness and reliability of the application.
+The application, `gin-gql-api`, utilizes the web framework `gin` for its development. This framework offers built-in support for features such as middleware support, JSON validation, routing, and error management. In addition, the application utilizes `gqlgen` for working with GraphQL. This library allows for the dynamic creation of models and resolvers for queries and mutations, based on the GraphQL schema. The ORM of choice for the application is `gorm`, which facilitates seamless interaction with SQL. Furthermore, `testify` and `go-sqlmock` are employed for writing unit tests, ensuring the robustness and reliability of the application.
 
 ## Development Setup
 ### Prerequisites
@@ -33,7 +33,7 @@ The application, `the-game`, utilizes the web framework `gin` for its developmen
 git clone git@github.com:lftrobusgauli/gin-gql-api.git
 ```
 
-1. Build required docker containers for source code and database and run the application
+2. Build required docker containers for source code and database and run the application
 ```
 cd gin-gql-api
 make docker/start
